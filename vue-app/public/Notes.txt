@@ -1,0 +1,230 @@
+Day1
+
+建置專案
+1. 安裝 node.js -> npm
+2.npm create vue@latest
+
+Single Page Application (SPA)
+Index.html > main.js(vue-router、pinia) > app.vue(vues)
+
+
+*.vue => component => SFC
+建立 Component(<template><script setup><style scoped>)
+<script setup> => compositoin api    上課用
+<script> => data(){} => options api
+
+使用 Component
+FirstComponent.vue
+
+[App.vue]
+import FirstComponent from '@/components/FirstComponent'
+
+<FirstComponent></FirstComponent> 上課用
+<first-component></first-component>
+
+
+響應式
+<template>
+HTML
+<p @mouseover="doSomething">{{ data }}</p>
+
+<input type="text" v-model="data">
+</template>
+
+<script setup>
+JavaScript 
+變數宣告let const
+import { ref } from 'Vue'
+const data = ref("aaaaa")
+data.value ="bbbb"
+
+const doSomething = ()=>{
+
+
+}
+</script>
+
+Componet Life Cycle
+
+Hook
+
+onMounted => DOM Tree 已經產生 => JS 、jQuery
+onUpdated => DOM Tree 更新 => JS 、jQuery
+
+
+HTML => HTML Parser => DOM Tree
+
+JSON => {}、[]
+
+
+Virtual DOM  =>  非同步 =>  Actual DOM
+
+
+//Callback Hell
+XMLHttpRequest  => Promise
+
+ES6
+new Promise()
+   .then()
+   .then()
+   .then()
+
+//ES7 async await
+
+async f1(){
+   const data1 = await 非同步的程式
+  const  data2 = await 非同步的程式 
+}
+
+i = i + 1
+
+<a v-bind:href="http://www.ispan.com.tw" title="ispan官網">iSpan</a>
+<img :src="abcd" alt="ispan logo" />
+
+<p>{{abcd}}</p>
+
+TypeScript > compiler > JavaScript
+SASS > compiler > CSS
+
+JavaScript EventType
+
+鍵盤：keypress、keydown、keyup
+滑鼠：click、mouseover、mouseout....
+表單：foucs、blur、change、submit、input....
+....
+....
+
+v-on:focus.修飾符
+
+<a href="http://www.ispan.com.tw" onclick="check(event)">ispan</a>
+
+function check(evt){
+  取消連結到ispan網站的行為
+  evt.preventDefault()
+}
+
+<form action="...">
+ <input type="text" name="username" />
+ <button type="submit" onclick="check(event)">
+</form>
+
+function check(evt){
+  取消連結到ispan網站的行為
+//如果有輸入就送出
+//如果沒輸入顯示錯誤訊息，停止送出的行為
+  evt.preventDefault()
+}
+
+data = ref({"name":"Tom","address":{"city":"","country":""},"phone":["",""]})
+count = ref(0)
+
+Day2
+
+<script setup>
+1.const data = ref("aaa") => 響應式資料   data.value
+2.computed => 計算 => 結果 => Cache
+3.watch => 監聽某一個響應式資料，取得舊的資料及新的資料
+4.watchEffect => vue3 => [ajax POST XMLHTTPRequest(fetch) => call api]
+
+const callApi=(id)=>{
+  const xhr = new XMLHTTPRequest()
+  xhr.open()
+ xhr.send()
+}
+</script>
+
+<template>
+one-way 資料從Script傳到template
+ 1.<p>{{ data Expression }}</p>  
+ 2.<p v-bind:[:]title="data Expression" /></p>
+
+two-way  script <> template
+3. <input type="text" v-model.lazy.number.trim="data">
+
+one-way 資料從template傳到Script
+4. <button v-on:[@]click="callApi(id)">
+</template>
+
+BMI計算
+1. 使用者介面：HTML、CSS
+2. 取得使用者輸入資料： Vue        JavaScript、jQuery、Vue、React.....
+3. 資料計算 Vue
+4. 顯示計算完的結果 Vue
+
+
+http://localhost:8080  /api/abc  => 程式
+
+/api/spot/categories   => SpotContoller/findCategories
+
+/home => HomeComponent.vue
+/about => AboutComponent.vue
+
+https://www.ispan.com.tw
+https://www.ispan.com.tw/
+
+FirstComponent.vue
+App.vue
+
+1. <FirstComponent> </FirstComponent>
+
+2. 路由比對載入Component
+ http://...../about
+ <RouterView></RouterView>
+
+VirtualDOM => ActualDOM
+
+Day3
+Vue-Router
+1.安裝套件
+2.路由設定檔router.js
+3.main.js引用router.js
+4,5. <RouterView><RouterLink>
+
+使用 bootstrap
+1. 安裝 bootstrap
+2. 引用 index.html(CDN)、main.js、app.vue  <= components
+
+Vue Directive (Angular)
+v-text、v-html
+v-if、v-show
+v-for
+v-bind [:]、v-model、v-on [@]
+:style、:class
+
+jQuery、Angular、React、Vue => JavaScript
+
+Ajax
+$.ajax()  => XMLHTTPRequest、fetch
+axios => XMLHTTPRequest、fetch
+
+JavaScript 陣列方法
+新增 Array.push(...)
+刪除 Array.splice(從陣列中的哪一個位置(index)開始, 刪幾筆)
+找到 ... 在陣列中的位置(index) Array.indexOf(...)
+把 ()=>{} 程式中回傳true的陣列資料放進前面的陣列變數中 const newArray = Array.filter(()=>{ return true})
+
+建立了一個Component
+MyComponent.vue
+
+怎麼使用Component
+1. App.vue components folder
+import MyComponent from '@/components/MyComponent'
+<MyComponent></MyComponent>
+
+2. App.vue  views folder
+Vue-Router
+http://localhost:5173/my => MyComponent.vue => <RouterView></RouterView>
+
+3. <component> 元素動態載入不同的component
+
+
+
+
+
+
+
+
+
+
+
+
