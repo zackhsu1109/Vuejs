@@ -11,7 +11,7 @@ const tabs = ref([
     { name: '便利生活', component: LifeProductComponent },
     { name: '星巴克', component: StarbuckProductComponent },
     { name: '旅遊交通', component: TrafficProductComponent },
-    { name: '', component: SearchResultComponent }, // 新增的搜尋結果 tab
+    { name: '', component: SearchResultComponent }, // 搜尋結果 tab 不顯示文字
 ]);
 
 const currentIndex = ref(0);
