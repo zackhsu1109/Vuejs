@@ -61,15 +61,16 @@ const handleSearch = () => {
               </a>
             </li>
           </ul>
-          <form class="d-flex" role="search" @submit.prevent="handleSearch">
+          <form class="d-flex align-items-center" role="search" @submit.prevent="handleSearch">
             <input 
               class="form-control me-2" 
               type="search" 
-              placeholder="Search" 
+              placeholder="搜尋物品" 
               aria-label="Search"
               v-model="searchKeyword"
+              style="width: 200px;" 
             />
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <button class="btn btn-outline-success" type="submit" style="width: 80px;">搜尋</button> <!-- 設定按鈕寬度 -->
           </form>
         </div>
       </div>

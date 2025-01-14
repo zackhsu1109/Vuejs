@@ -12,6 +12,7 @@
                 <img src="http://localhost:8081/BonusMallPic/point.jpg" alt="point image" class="point-img">
                 <span class="point-text">{{ product.cost }} 點</span>
               </div>
+              <div class="row mt-3"></div>
               <a href="#" class="btn" style="background-color: #ff5733; color: white;">兌換商品</a>
             </div>
           </div>
