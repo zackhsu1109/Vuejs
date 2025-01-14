@@ -2,7 +2,7 @@
 import AllProductComponent from '@/components/AllProductComponent.vue';
 import LifeProductComponent from '@/components/LifeProductComponent.vue';
 import StarbuckProductComponent from '@/components/StarbuckProductComponent.vue';
-import TrafficComponent from '@/components/TrafficComponent.vue';
+import TrafficProductComponent from '@/components/TrafficProductComponent.vue';
 
 import { ref } from 'vue';
 
@@ -11,7 +11,7 @@ const tabs = ref([
     { name: '全部', component: AllProductComponent },
     { name: '便利生活', component: LifeProductComponent },
     { name: '星巴克', component: StarbuckProductComponent },
-    { name: '旅遊交通', component: TrafficComponent },
+    { name: '旅遊交通', component: TrafficProductComponent },
 ])
 
 const currentIndex = ref(0)

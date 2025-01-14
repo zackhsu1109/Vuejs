@@ -10,7 +10,7 @@
 
           <!-- 商品圖片區塊，外框顏色 -->
           <div class="product-image-wrapper" style="border: 1px solid lightgray; padding: 5px;">
-            <img :src="'http://localhost:8080' + product.productimage" class="card-img-top" alt="product image">
+            <img :src="'http://localhost:8081' + product.productimage" class="card-img-top" alt="product image">
           </div>
           <div class="card-body">
             
@@ -19,7 +19,7 @@
 
             <!-- 顯示需要點數：圖片 + 數字，放大點數 -->
             <div style="display: flex; align-items: center; font-size: 18px;"> <!-- 放大點數 -->
-              <img src="http://localhost:8080/BonusMallPic/point.jpg" alt="point image" class="point-img">
+              <img src="http://localhost:8081/BonusMallPic/point.jpg" alt="point image" class="point-img">
               <span class="point-text">{{ product.cost }} 點</span>
             </div>
 
@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     getAllProducts() {
-      fetch("http://localhost:8080/api/bonusproduct/filter?category=全部")
+      fetch("http://localhost:8081/api/bonusproduct/filter?category=全部")
         .then(response => response.json())  // 解析 JSON 資料
         .then(data => {
           console.log("API response:", data);  // 檢查返回的數據

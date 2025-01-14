@@ -27,58 +27,16 @@ const show = ref(true)
 
 <template>
     <div class="container">
-        <h2>Hello Vue!!!!!</h2>
+        <br>
+        <!--<h2>Hello Vue!!!!!</h2>-->
         <NavbarComponent></NavbarComponent>
         <!-- <RouterLink to="/">首頁</RouterLink> | 
- <RouterLink to="/about">關於我們</RouterLink> | 
- <RouterLink to="/contact">聯絡我們</RouterLink> |  -->
+        <RouterLink to="/about">關於我們</RouterLink> | 
+        <RouterLink to="/contact">聯絡我們</RouterLink> |  -->
 
         <hr />
         <!--是一個容器，根據路由，載入不同的Component-->
         <RouterView></RouterView>
-
-        <hr />
-        <!-- <FancyButton>
-            <i class="bi bi-airplane"></i>
-            <span class="mx-1">click</span>
-        </FancyButton>
-        <FancyButton>
-            <i class="bi bi-apple"></i>
-            <span class="mx-1">apple</span>
-        </FancyButton>
-        <FancyButton>
-            <i class="bi bi-balloon"></i>
-            <span class="mx-1">balloon</span>
-
-        </FancyButton>
-
-
-        <ParentComponent></ParentComponent> -->
-
-        <div>
-            <!-- <DirectiveComponent></DirectiveComponent>
-     <EventModifiers></EventModifiers> -->
-
-            <!-- <button @click="show = !show">Toggle</button>
-            <Transition name="img1">
-                <img v-if="show" src="/images/loading.gif" alt="loading" />
-            </Transition> -->
-        </div>
-
-
-
-        <!-- <HomeView></HomeView>
- <AboutView></AboutView>
- <ContactView></ContactView>
- 
-  <BMIComponent></BMIComponent>
-<WatchDemo></WatchDemo>
- <ComputedDemo></ComputedDemo>
-
- <MyComponent></MyComponent>
- <FirstComponent></FirstComponent>
-<SecondComponent></SecondComponent>  
-<BindingComponent></BindingComponent>-->
 
     </div>
 
