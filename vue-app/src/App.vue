@@ -3,25 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import 'bootstrap/dist/js/bootstrap.js'
 
-import BindingComponent from './components/BindingComponent.vue';
-import BMIComponent from './components/BMIComponent.vue';
-import ComputedDemo from './components/ComputedDemo.vue';
-import FirstComponent from './components/FirstComponent.vue';
-import MyComponent from './components/MyComponent.vue';
-
-import SecondComponent from './components/SecondComponent.vue';
-import WatchDemo from './components/WatchDemo.vue';
-import AboutView from './views/AboutView.vue';
-import ContactView from './views/ContactView.vue';
-import HomeView from './views/HomeView.vue';
 import NavbarComponent from './components/NavbarComponent.vue';
-import DirectiveComponent from './components/DirectiveComponent.vue';
-import EventModifiers from './components/EventModifiers.vue';
-import { ref } from 'vue';
-import ParentComponent from './components/ParentComponent.vue';
-import FancyButton from './components/FancyButton.vue';
-
-const show = ref(true)
 
 </script>
 
